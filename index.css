@@ -438,6 +438,46 @@ nav .togglebtn span {
     color: var(--greenblue);
 }
 
+.gallery-container{
+    padding: 3rem 1rem;
+    margin: 0 2rem;
+}
+
+.gallery-tittle h2, .gallery-tittle span{
+    font-size: 3rem;
+    color: var(--text-black);
+    text-align: center;
+}
+
+.gallery-tittle p{
+    text-align: center;
+    font-weight: 500;
+    color: var(--black);
+}
+
+.gallery-tittle{
+    padding: 7rem 3rem;
+}
+
+.gallery-tittle span{
+    color: var(--greenblue);
+}
+
+.gallery{
+    columns: 300px;
+    column-gap: 15px;
+    overflow: hidden;
+}
+
+.gallery-item{
+    position: relative; 
+    margin-bottom: 1rem;
+    overflow: hidden;
+    border-radius: 8px;
+    break-inside: avoid;
+    box-shadow: 0 7px 7px 0 rgba(0, 0, 0, 0.2);
+}
+
 .gallery img{
     width: 100%;
     display: block;
