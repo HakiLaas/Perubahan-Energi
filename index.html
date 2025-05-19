@@ -4,14 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Kuliah</title>
     <!-- Icon Image -->
     <link rel="icon" type="image/x-icon" href="Assets/Element/Haki.png">
+    <!-- Swipper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- Icon Link -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- Css Links -->
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
@@ -21,7 +24,7 @@
             <header>
                 <div class="logo">
                     <img src="#" alt="">
-                    <div class="logo-text"><a href="#"></a></div>
+                    <div class="logo-text"><a href="#">PLTK</a></div>
                 </div>
                 <nav>
                     <i class='bx bx-sun' id="sun"></i>
@@ -32,42 +35,187 @@
                     </div>
                     <ul class="nav-links">
                         <li><a id="t1" href="#">Beranda</a></li>
-                        <li><a id="t2" href="#about">Tentang</a></li>
-                        <li><a id="t3" href="#service">Layanan</a></li>
-                        <li><a id="t4" href="#portfolio">Protofolio</a></li>
+                        <li><a id="t2" href="#information">Informasi</a></li>
+                        <li><a id="t3" href="#galeri-proyek">Proyek</a></li>
                         <li><a id="t5" href="#contact">Kontak</a></li>
                         <li><i class='bx bx-sun' id="theme"></i></li>
-                        <li class="translation none"><i class='bx bx-globe' id="translation"></i>
                         </li>
                     </ul>
                 </nav>
             </header>
+
+            <!-- Slider Section -->
             <main>
-                <div class="container">
-                    <div class="hero-pic fade">
-                        <img src="Assets/Element/Profile-Crop.jpg" alt="">
-                    </div>
-                    <div class="hero-text fade">
-                        <h5 id="t6">Hi I'm <span class="input"></span></h5>
-                        <h1>Lampu LED</h1>
-                        <p id="t7"></p>
-                        <div class="btn-group fade">
-                            <a href="#" class="btn active" id="t8">Rekrut Saya</a>
-                            <a href="#contact" class="btn" id="t9">Kontak Saya</a>
+                <section class="home">
+                    <div class="container">
+                        <div class="slider-section">
+                            <div class="swiper mySwiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="Assets/Slider/slide1.jpg" alt="Slide 1" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="Assets/Slider/slide2.jpg" alt="Slide 2" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="Assets/Slider/slide3.jpg" alt="Slide 3" />
+                                    </div>
+                                </div>
+                                <!-- Navigation buttons -->
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                                <!-- Pagination -->
+                                <div class="swiper-pagination"></div>
+                            </div>
                         </div>
-                        <div class="social fade">
-                            <a href="https://github.com/HakiLaas"><i class='bx bxl-github'></i></a>
-                            <a href="https://www.instagram.com/ditt_874"><i class='bx bxl-instagram'></i></a>
-                            <a href="https://wa.me/+6285934832133"><i class='bx bxl-whatsapp'></i></a>
-                            <a href=""><i class='bx bxl-discord'></i></a>
+                        <div class="hero-text fade">
+                            <h1>ENERGI TERBARUKAN</h1>
+                            <p id="t7">Prototipe sederhana dengan fungsi untuk mengubah energi
+                                gerak (mekanik) menjadi energi listrik
+                            </p>
+                            <div class="btn-group fade">
+                                <a href="#galeri-proyek" class="btn active" id="t8">Lihat Proyek</a>
+
+                            </div>
+                        </div>
+                        <div class="next-section">
+                            <a href="#information"><i class='bx bx-chevron-down'></i></a>
                         </div>
                     </div>
-                    <div class="next-section">
-                        <a href="#about"><i class='bx bx-chevron-down'></i></a>
-                    </div>
-                </div>
         </div>
     </div>
+    </section>
+
+    <section class="information section2" id="information">
+        <div class="container-about">
+            <div class="about-image fade">
+                <img src="Assets/f2e969a5-07d5-4029-9b0d-870c9a52b9ed.jpg" alt="">
+            </div>
+            <div class="about-content fade">
+                <h2 id="t10"><span>Informasi</span> </h2>
+                <!-- Kolom 1 -->
+                <div class="text-column fade">
+                    <p class="sub-title" id="t11"><span>Halo!</span></p>
+                    <p class="description" id="t12">
+                        Alat ini adalah prototipe sederhana yang kita buat berfungsi untuk mengubah energi gerak (mekanik) menjadi energi listrik  dengan memanfaatkan prinsip kerja motor DC sebagai generator generator ini fungsinya untuk menghidupi lampu LED
+                    </p>
+                </div>
+                <!-- Kolom 2 -->
+                <div class="info-column">
+                    <div class="info">
+                        <ul class="info1 fade">
+                            <h2 id="t13">Komponen Alat</h2>
+                            <li><strong>Roda Putar</strong><span><br>Terbuat dari roda plastik
+                                    Berfungsi untuk menangkap energi gerak (misalnya dari tangan atau angin) dan bisa
+                                    memutar poros besinya
+                                </span>
+                            </li><br>
+                            <li><strong>Poros Besi</strong><span><br>Terhubung dengan roda.
+                                    Fungsinya untuk meneruskan putaran ke motor DC
+                                </span>
+                            </li><br>
+                            <li><strong>Motor DC</strong><span><br>bisa dilihat warna abu-abu poros yang kecil di depan.
+                                    Ketika porosnya diputar, akan menghasilkan arus listrik. dan lampu LED bisa hidup
+                                </span>
+                            </li>
+                            <li><strong>Papan Kayu</strong><span><br>Sebagai dudukan atau tempat rangka alat, supaya
+                                    bisa menjaga komponen tetap stabil dan sejajar.
+                                </span>
+                            </li>
+                        </ul>
+                        <ul class="info2 fade">
+                            <h2 id="t17">Cara Kerja</h2>
+                            <li><strong>1. Roda dapat diputar secara manual oleh tangan
+                                </strong><span id="t18"><br></span></li><br>
+                            <li><strong>2. Putarkan roda untuk menggerakkan poros besi yang terhubung ke motor dc supaya
+                                    lampu LED bisa hidup
+                                </strong><span id="t19"><br></span></li><br>
+                            <li><strong>3. Motor DC menerima putaran dan menghasilkan energi listrik menjadi lampu LED
+                                    yang terang</strong><span id="t15"><br></span></li><br>
+                            <li><strong>4. Listrik ini bisa dapat diukur dengan alat ukur sesuai tegangan listrik, atau
+                                    digunakan untuk menyalakan lampu kecil (LED) sebagai energi listrik yang telah dapat
+                                    dihasilkan.
+                                </strong><span id="t20"><br></span></li><br>
+                            <li><strong>Konversi Energi yang terjadi</strong><span id="t21"><br>Energi Kinetik (gerak roda), diubah menjadi, energi Listrik (output dari motor DC)</span></li><br>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="galeri-proyek section1" id="galeri-proyek">
+        <div class="gallery-tittle">
+            <h2 id="t37" class="fade"><span></span></h2>
+            <p id="t65" class="fade">
+                
+            </p>
+        </div>
+        <div class="gallery-container">
+
+            <div class="gallery">
+                <div class="gallery-item fade">
+                    <img src="Assets/IMG_4898.HEIC" alt="" data-caption="BMC Simple design with Adobe Ilustrator">
+                    <div class="description">BMC Simple Design</div>
+                </div>
+                <div class="gallery-item fade">
+                    <img src="Assets/Gallery/Portofolio/Comic design.jpg" alt="Comic" data-caption="Short Comic Design with Ibis Paint X">
+                    <div class="description">Comic Short Design</div>
+                </div>
+                <div class="gallery-item fade">
+                    <img src="Assets/Gallery/Portofolio/crud-application.png" alt="crud-application" data-caption="Crud Application Test with Php">
+                    <div class="description">Crud Application</div>
+                </div>
+                <div class="gallery-item fade">
+                    <img src="Assets/Gallery/Portofolio/fashion-shop.png" alt="Website Fashionshop" data-caption="Website Fashion Shop with teamwork">
+                    <div class="description">Teamwork Website Fashionshop</div>
+                </div>
+                <div class="gallery-item fade">
+                    <img src="Assets/Gallery/Portofolio/form-design.png" alt="Form-test" data-caption="Form design test with Html & Css">
+                    <div class="description">Form Design Test</div>
+                </div>
+                <div class="gallery-item fade">
+                    <img src="Assets/Gallery/Portofolio/Mockupdesign.png" alt="Mockupdesign" data-caption="Mockup design Shoebox & Slipper with Figma">
+                    <div class="description">Mockup Simple Design</div>
+                </div>
+                <div class="gallery-item fade">
+                    <img src="Assets/Gallery/Portofolio/glyphs-brand.png" alt="Brand-design" data-caption="Brand Design about GLYPHS with Adobe Ilustrator">
+                    <div class="description">Brand Design</div>
+                </div>
+                <div class="gallery-item fade">
+                    <img src="Assets/Gallery/Portofolio/mockup-test.png" alt="Brand-design-test" data-caption="Brand Design Test with Figma">
+                    <div class="description">Brand Design Test</div>
+                </div>
+                <div class="gallery-item fade">
+                    <img src="Assets/Gallery/Portofolio/flappy-bird.png" alt="Flappy-game" data-caption="Flappy Bird Game Design with Adobe Ilustrator & teamwork">
+                    <div class="description">Teamwork Game Design Test</div>
+                </div>
+                
+                <div class="gallery-item fade">
+                    <img src="Assets/Gallery/Portofolio/Piagam-pertama.jpg" alt="Certificate" data-caption="My Certificate in Powerpoint competition">
+                    <div class="description">My Certificate</div>
+                </div>
+                <div class="gallery-item fade">
+                    <img src="Assets/Gallery/Portofolio/dog-shop.png" alt="Website Dogshop" data-caption="Website Dog Shop with Html & Css">
+                    <div class="description">Website Dogshop</div>
+                </div>
+            </div>
+        </div>
+        <!-- Lightbox -->
+        <div id="lightbox" class="lightbox">
+            <span class="close">&times;</span>
+            <img class="lightbox-image" src="" alt="">
+            <div class="lightbox-caption"></div>
+        </div>
+    </section>
+
+    <section class="contact section2" id="contact">
+
+    </section>
+    <footer>
+
+    </footer>
 </body>
 <script src="script.js"></script>
+
 </html>

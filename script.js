@@ -1,4 +1,4 @@
-    // Hamburger Menu
+// Hamburger Menu
 const toggleBtn = document.querySelector('.togglebtn');
 const navLinks = document.querySelector('.nav-link');
 
@@ -9,7 +9,7 @@ toggleBtn.addEventListener('click', () => {
     // Button Next dan Home
 document.addEventListener("DOMContentLoaded", () => {
     const nextSection = document.querySelector(".next-section a");
-    const aboutSection = document.getElementById("about");
+    const aboutSection = document.getElementById("information");
     const arrowIcon = nextSection.querySelector("i");
     
     window.addEventListener("scroll", () => {
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
             arrowIcon.classList.remove("bx-chevron-up");
             arrowIcon.classList.add("bx-chevron-down");
-            nextSection.href = "#about"; 
+            nextSection.href = "#information"; 
         }
     });
 });
@@ -51,4 +51,23 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
     Icon();
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Swiper slider
+    new Swiper(".mySwiper", {
+        loop: true,
+        autoplay: {
+            delay: 3000, // Ganti ke waktu yang diinginkan (ms)
+            disableOnInteraction: false, // Autoplay tetap berjalan setelah user swipe
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
 });
