@@ -71,3 +71,64 @@ document.addEventListener("DOMContentLoaded", function () {
         },
     });
 });
+
+const lightbox = document.getElementById('lightbox');
+const lightboxImage = document.querySelector('.lightbox-image');
+const lightboxCaption = document.querySelector('.lightbox-caption');
+const closeButton = document.querySelector('.lightbox .close');
+const galleryImages = document.querySelectorAll('.gallery img, .container .hero-pic img');
+const galleryVideos = document.querySelectorAll('.gallery video');
+const lightboxVideo = document.querySelector('.lightbox-video');
+
+// Play video on hover, pause on mouseout
+galleryVideos.forEach(video => {
+    video.addEventListener('mouseenter', () => {
+        video.play();
+    });
+    video.addEventListener('mouseleave', () => {
+        video.pause();
+        video.currentTime = 0;
+    });
+    // Show video in lightbox on click
+    video.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImage.style.display = 'none';
+        lightboxVideo.style.display = 'block';
+        lightboxVideo.src = video.src;
+        lightboxVideo.poster = video.poster || '';
+        lightboxVideo.currentTime = 0;
+        lightboxVideo.play();
+        lightboxCaption.textContent = video.getAttribute('data-caption') || '';
+    });
+});
+
+// Show image in lightbox (update existing code)
+galleryImages.forEach(image => {
+    image.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImage.style.display = 'block';
+        lightboxVideo.style.display = 'none';
+        lightboxImage.src = image.src;
+        lightboxCaption.textContent = image.getAttribute('data-caption');
+        lightboxImage.classList.add('zoom-in');
+        setTimeout(() => {
+            lightboxImage.classList.remove('zoom-in');
+        }, 300);
+    });
+});
+
+// Close lightbox (update existing code)
+closeButton.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+    lightboxVideo.pause();
+    lightboxVideo.currentTime = 0;
+});
+
+// Close lightbox on outside click (update existing code)
+lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+        lightbox.style.display = 'none';
+        lightboxVideo.pause();
+        lightboxVideo.currentTime = 0;
+    }
+});

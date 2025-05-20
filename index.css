@@ -1,10 +1,34 @@
 .hero-section {
+    background: url('https://akcdn.detik.net.id/visual/2022/06/30/ilustrasi-pembangkit-listrik-tenaga-angin_169.jpeg?w=1200') no-repeat center center/cover;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    color: #fafdff;
+    text-align: start;
+    padding: 20px;
+    z-index: -1;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+/* .hero-section {
     width: 100%;
     height: 100%;
     min-height: 91vh;
     background: var(--black);
     margin-top: 77px;
-}
+} */
 .section1 {
     width: 100%;
     height: 100%;
@@ -205,25 +229,28 @@ nav .togglebtn span {
     max-width: 500px;
     display: flex;
     flex-direction: column;
+    z-index: 3;
+    position: absolute;
+    left: 5rem;
 }
 
 .hero-text h5 {
-    color: var(--white);
+    color: #fafdff;
     font-size: 14px;
 }
 
 .hero-text h5 span {
-    color: var(--white);
+    color: #fafdff;
     font-size: 16px;
 }
 
 .hero-text h1 {
-    color: var(--white);
+    color: #fafdff;
     font-size: 3rem;
 }
 
 .hero-text p {
-    color: var(--white);
+    color: #fafdff;
 }
 
 /* Button */
@@ -328,40 +355,40 @@ nav .togglebtn span {
     object-fit: cover;
 }
 
-.container-about .about-image{
+.container-about .about-image {
     width: 27vw;
     height: 50vh;
     align-content: center;
     padding: 1rem 2rem;
 }
 
-.about-image img{
+.about-image img {
     width: 250%;
     height: auto;
     border-radius: 1rem;
     cursor: pointer;
 }
 
-.container-about{
+.container-about {
     padding: 10rem 20px;
     display: flex;
 }
 
-.container-about h2{
+.container-about h2 {
     font-size: 3rem;
     font-weight: 700;
-    color: var(--black  );
+    color: var(--black);
     margin-bottom: 30px;
 }
 
-.container-about h2 span{
+.container-about h2 span {
     font-size: 3rem;
     font-weight: 700;
     color: var(--greenblue);
     margin-bottom: 30px;
 }
 
-.about-content{
+.about-content {
     gap: 5rem;
     flex-wrap: wrap;
     margin-left: 17rem;
@@ -369,108 +396,109 @@ nav .togglebtn span {
     justify-content: space-between;
 }
 
-.text-column{
+.text-column {
     flex: 1;
     min-width: 300px;
     padding-right: 50px;
 }
 
-.text-column .sub-title{
+.text-column .sub-title {
     font-size: 1.2rem;
     color: var(--greenblue);
 }
 
-.text-column .description{
+.text-column .description {
     color: var(--black);
     font-size: 1rem;
     line-height: 1.8;
 }
 
-.info-column{
+.info-column {
     flex: 1;
     min-width: 300px;
     padding-top: 30px;
 }
 
-.info{
+.info {
     display: flex;
     gap: 3rem;
     justify-content: space-between;
 }
 
-.info .info2{
+.info .info2 {
     width: 50%;
 }
 
-.info ul{
+.info ul {
     list-style: none;
     padding: 0;
     width: 20%;
     margin-bottom: 20px;
 }
 
-.info li{
+.info li {
     color: var(--black);
     font-size: 0.9rem;
     list-style-type: circle;
     margin-bottom: 10px;
 }
 
-.info li::marker{
+.info li::marker {
     color: var(--black);
 }
 
-.info h2{
+.info h2 {
     color: var(--black);
     font-size: 1rem;
     margin-bottom: 10px;
 }
 
-.info li h3{
+.info li h3 {
     color: var(--black);
     font-weight: 400;
     font-size: .9em;
     margin-bottom: 10px;
 }
 
-.info strong{
+.info strong {
     font-weight: 500;
     color: var(--greenblue);
 }
 
-.gallery-container{
+.gallery-container {
     padding: 3rem 1rem;
     margin: 0 2rem;
 }
 
-.gallery-tittle h2, .gallery-tittle span{
+.gallery-tittle h2,
+.gallery-tittle span {
     font-size: 3rem;
-    color: var(--text-black);
+    color: var(--text-white );
     text-align: center;
 }
 
-.gallery-tittle p{
+.gallery-tittle p {
     text-align: center;
     font-weight: 500;
-    color: var(--black);
+    color: var(--white);
 }
 
-.gallery-tittle{
+.gallery-tittle {
     padding: 7rem 3rem;
 }
 
-.gallery-tittle span{
+.gallery-tittle span {
     color: var(--greenblue);
 }
 
-.gallery{
-    columns: 300px;
+.gallery {
+    columns: 400px;
     column-gap: 15px;
     overflow: hidden;
 }
 
-.gallery-item{
-    position: relative; 
+.gallery-item {
+    position: relative;
     margin-bottom: 1rem;
     overflow: hidden;
     border-radius: 8px;
@@ -478,43 +506,69 @@ nav .togglebtn span {
     box-shadow: 0 7px 7px 0 rgba(0, 0, 0, 0.2);
 }
 
-.gallery img{
+.gallery img {
     width: 100%;
     display: block;
     border-radius: 8px;
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.gallery-item:hover img{
+.gallery-item:hover img {
     transition: all .5s ease;
     transform: scale(1.05);
     filter: brightness(0.6);
 }
 
-.gallery-item .description{ 
+.gallery-item .description {
     position: absolute;
-    bottom: 0;  
+    bottom: 0;
     left: 0;
     width: 100%;
-    color: white; 
+    color: white;
     background: rgba(0, 0, 0, 0.7);
     padding: 10px;
     font-size: 1rem;
     text-align: center;
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 0.3s ease, transform 0.3s ease; 
+    transition: opacity 0.3s ease, transform 0.3s ease;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
 }
 
-.gallery-item:hover .description{
+.gallery-item:hover .description {
     opacity: 1;
-    transform: translateY(0); 
+    transform: translateY(0);
+}
+
+.gallery video {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+    object-fit: cover;
+    transition: transform 0.3s ease, opacity 0.3s ease, filter 0.3s ease;
+    cursor: pointer;
+    /* Pastikan tidak ada filter atau opacity di sini */
+    filter: brightness(1);
+    opacity: 1;
+}
+.gallery-item:hover video {
+    transform: scale(1.05);
+    filter: brightness(0.6);
+}
+/* Lightbox video */
+.lightbox-video {
+    max-width: 90vw;
+    max-height: 70vh;
+    border-radius: 8px;
+    background: #000;
+    outline: none;
+    margin-bottom: 1rem;
+    display: none;
 }
 
 /* Lightbox */
-.lightbox{
+.lightbox {
     display: none;
     flex-direction: column;
     position: fixed;
@@ -522,23 +576,24 @@ nav .togglebtn span {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.9); 
+    background: rgba(0, 0, 0, 0.9);
     justify-content: center;
     align-items: center;
     z-index: 1000;
-    animation: fadeIn 0.5s ease-in-out; 
+    animation: fadeIn 0.5s ease-in-out;
 }
 
-@keyframes fadeIn{
-    from{
+@keyframes fadeIn {
+    from {
         opacity: 0;
     }
-    to{
+
+    to {
         opacity: 1;
     }
 }
 
-.lightbox-image{
+.lightbox-image {
     max-width: 90%;
     max-height: 70%;
     margin-bottom: 1rem;
@@ -546,20 +601,20 @@ nav .togglebtn span {
     transition: transform 0.3s ease;
 }
 
-.lightbox-image:hover{
+.lightbox-image:hover {
     transform: scale(1.05);
 }
 
 
-.lightbox-caption{
+.lightbox-caption {
     color: #fff;
     font-size: 1.2rem;
     text-align: center;
     padding: 1rem;
-    max-width: 90%; 
+    max-width: 90%;
 }
 
-.lightbox .close{
+.lightbox .close {
     position: absolute;
     top: 20px;
     right: 30px;
@@ -569,23 +624,24 @@ nav .togglebtn span {
     transition: transform 0.3s ease;
 }
 
-.lightbox .close:hover{
-    transform: scale(1.2); 
+.lightbox .close:hover {
+    transform: scale(1.2);
 }
 
 /* Animasi Zoom */
-.zoom-in{
-    transform: scale(0.9); 
+.zoom-in {
+    transform: scale(0.9);
     animation: zoomIn 0.3s ease forwards;
 }
 
 
-@keyframes zoomIn{
-    from{
+@keyframes zoomIn {
+    from {
         transform: scale(0.9);
         opacity: 0;
     }
-    to{
+
+    to {
         transform: scale(1);
         opacity: 1;
     }
@@ -596,111 +652,172 @@ main {
 }
 
 /* Teams Section */
+.teams{
+    padding-bottom: 5rem;
+}
 .teams-title {
-  text-align: center;
-  margin-bottom: 2.5rem;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    padding-top: 10rem;
 }
+
 .teams-title h2 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--black);
-  margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: 0.5rem;
 }
+
 .teams-title p {
-  color: var(--gray);
-  font-size: 1.1rem;
-  max-width: 600px;
-  margin: 0 auto;
+    color: var(--gray);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .teams-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2.5rem 2rem;
-  justify-items: center;
-  max-width: 1100px;
-  margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2.5rem 2rem;
+    justify-items: center;
+    max-width: 1280px;
+    margin: 0 auto;
 }
 
 .team-member {
-  background: transparent;
-  border-radius: 10%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2.2rem 1rem 1.5rem 1rem;
-  transition: box-shadow 0.3s;
+    background: transparent;
+    border-radius: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.2rem 1rem 1.5rem 1rem;
+    transition: box-shadow 0.3s;
 }
 
 .team-member:hover {
-  box-shadow: 0 12px 32px 0 rgba(0,0,0,0.16);
+    box-shadow: 0 12px 32px 0 rgba(0, 0, 0, 0.16);
 }
 
 .team-photo {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  overflow: hidden;
-  margin-bottom: 1.2rem;
-  background: #f3f3f3;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 1.2rem;
+    background: #f3f3f3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
 .team-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 .team-member h3 {
-  margin: 0.2rem 0 0.1rem 0;
-  font-size: 1.15rem;
-  color: var(--black);
-  font-weight: 600;
+    margin: 0.2rem 0 0.1rem 0;
+    font-size: 1.15rem;
+    color: var(--black);
+    text-align: center;
+    font-weight: 600;
 }
+
 .team-member .role {
-  color: var(--gray);
-  font-size: 1rem;
-  margin-bottom: 0.7rem;
+    color: var(--gray);
+    font-size: 1rem;
+    margin-bottom: 0.7rem;
 }
 
 .team-social {
-  display: flex;
-  gap: 0.7rem;
-  margin-top: 0.5rem;
-  justify-content: center;
-}
-.team-social a {
-  color: var(--blackgray);
-  font-size: 1.3rem;
-  transition: color 0.2s;
-}
-.team-social a:hover {
-  color: var(--greenblue);
+    display: flex;
+    gap: 0.7rem;
+    margin-top: 0.5rem;
+    justify-content: center;
 }
 
+.team-social a {
+    color: var(--blackgray);
+    font-size: 1.3rem;
+    transition: color 0.2s;
+}
+
+.team-social a:hover {
+    color: var(--greenblue);
+}
+
+footer {
+    /* margin: 5rem 0 1rem 0; */
+    background: var(--black);
+    color: var(--white);
+    padding: 2rem 0 0 0;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1280px;
+    display: flex;
+    justify-content: space-between;
+    text-align: start;
+}
+.footer-content .footer-logo {
+    flex: 1;
+    padding: 0 2rem;
+}
+.footer-content .footer-logo a{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--white);
+}
+
+.footer-links{
+    display: flex;
+    gap: 20px;
+    padding: 0 2rem;
+}
+
+.footer-links a{
+    color: var(--white);
+    font-size: 1rem;
+    transition: color 0.2s;
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    align-items: center ;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    background: var(--greenblue);
+    padding: 1rem 0;
+}
+
+
 @media (max-width: 900px) {
-  .teams-grid {
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 2rem 1rem;
-  }
-  .team-photo {
-    width: 110px;
-    height: 110px;
-  }
+    .teams-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 2rem 1rem;
+    }
+
+    .team-photo {
+        width: 110px;
+        height: 110px;
+    }
 }
 
 @media (max-width: 600px) {
-  .teams-title h2 {
-    font-size: 1.5rem;
-  }
-  .teams-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem 0;
-  }
-  .team-member {
-    padding: 1.5rem 0.5rem 1rem 0.5rem;
-  }
+    .teams-title h2 {
+        font-size: 1.5rem;
+    }
+
+    .teams-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem 0;
+    }
+
+    .team-member {
+        padding: 1.5rem 0.5rem 1rem 0.5rem;
+    }
 }
