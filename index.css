@@ -788,7 +788,6 @@ footer {
 .footer-bottom {
     align-items: center ;
     margin-top: 2rem;
-    margin-bottom: 1.5rem;
     font-size: 0.9rem;
     background: var(--greenblue);
     padding: 1rem 0;
